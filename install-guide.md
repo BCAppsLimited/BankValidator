@@ -5,8 +5,8 @@ keywords:
 comments: true
 
 # Hero section
-title: Getting Started
-description:  In this section you'll find basic information about Street As and how to install it and use it properly. If you're a first time user, you should read this Getting Started section first.
+title: Install Guide
+description:  In this section you'll find basic information about how to install the app and configure the licenses.  If you're a first time user, you should read this Install Guide first.
 
 # Author box
 author:
@@ -21,11 +21,11 @@ micro_nav: true
 # Page navigation
 page_nav:
     prev:
-        content: Home
-        url: /
+        content: Overview
+        url: /overview
     next:
-        content: Clever Stuff
-        url: /advanced-configuration-options
+        content: The Algorithm
+        url: /the-algorithm
 ---
 
 # What is Street As?

@@ -25,18 +25,18 @@ grid_navigation:
       excerpt: In this section you'll find basic information about the NZ Bank Account Validator, what it does and how the validation works. Read this section to help you decide if this is the right extension for you.
       cta: Read more
       url: /overview
-    - title: Clever Stuff
-      excerpt: Read this section for more advanced setup options like controlling whether a recipient should appear, or how to override default settings for specific reports.
-      cta: Get smarter
-      url: /advanced-configuration-options
-    - title: New Zealand Postal Addresses
-      excerpt: Learn about rural delivery routes, postal services, and why suburbs must be specified unless they're not needed.
-      cta: Read all about it
-      url: /new-zealand-postal-addresses
-    - title: Common Address Field Changes
-      excerpt: A summary of the most common changes that have been made to the numerous pages that display an address.
-      cta: Read it
-      url: /common-address-field-changes
+    - title: Install Guide
+      excerpt: Read this section for details on how to install the app and buy the licenses.
+      cta: Show me the Money
+      url: /install-guide
+    - title: The Algorithm
+      excerpt: Learn about the NZ Bank Account format and how we perform the validation.
+      cta: Teach Me
+      url: /the-algorithm
+    - title: Errors Explained
+      excerpt: A summary of the validation messages and some clues as to probably what went wrong.
+      cta: Explain It to Me
+      url: /errors-explained
     - title: Context Sensitive Help
       excerpt: A list of changes to the various pages that have been modified as part of this extension and which new fields have been added. Honestly, you shouldn't read this.
       cta: I can take it
