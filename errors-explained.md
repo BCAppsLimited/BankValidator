@@ -21,7 +21,7 @@ micro_nav: true
 # Page navigation
 page_nav:
     prev:
-        content: The Allgorithm
+        content: The Algorithm
         url: /the-algorithm
     next:
         content: Context Sensitive Help
@@ -152,7 +152,7 @@ This is an error you should  not see. It is an internal error that you cannot co
 
 ## The weighting array does not have a value at position.
 
-Result Status = 'Weighting Array Missing.
+Result Status = 'Weighting Array Missing'.
 
 This is also an internal error that you should never see. It means there is a bug in the algorithm and you should report this to use for further investigation.
 
