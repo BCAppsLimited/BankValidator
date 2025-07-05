@@ -28,20 +28,11 @@ page_nav:
         url: /the-algorithm
 ---
 
-# What is Street As?
-
-Street As changes the layout of all[^1] pages that include address fields so they are better suited for New Zealand addresses. Once activated, all address pages will show:
-
-- **Address**
-- **Suburb**
-- **Town or City**
-- **Postcode**
-
-The **Country/Region** code that controls how an address is displayed has also moved so that it appears before the first address field. You can configure the system so that leaving the **Country/Region** field empty will treat the address like it's a New Zealand address.
-
-There are some more advanced features that are covered in the [Clever Stuff](/StreetAs/advanced-configuration-options) section, but for now, let's get you going with the basic stuff.
-
 # Installation
+
+## Free Trial
+
+The NZ Bank Account Validator app is available with a free trial through [Microsoft's AppSource](https://appsource.microsoft.com/en-NZ/marketplace/apps?product=dynamics-365%3Bdynamics-365-business-central&page=1). Simply visit the [NZ Bank Account Validator Product Page](https://appsource.microsoft.com/en-NZ/product/DynamicsBC/PUBID.bcappslimited1693858041247%7CAID.nz-bank-account-validator%7CPAPPID.0a89d807-b47c-487d-97ec-a1c63d794cca) on AppSource.
 
 ## Purchase
 

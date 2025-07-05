@@ -32,7 +32,7 @@ page_nav:
 
 ## Introduction
 
-This End-User License Agreement (“EULA”) is a legal agreement between you (either an individual or a single entity) and BC Apps Limited (“Licensor”) for the use of Street As (“Software”). This EULA governs your use of the Software provided by the Licensor. By installing or using the Software, you agree to be bound by the terms of this EULA.
+This End-User License Agreement (“EULA”) is a legal agreement between you (either an individual or a single entity) and BC Apps Limited (“Licensor”) for the use of NZ Bank Account Validator (“Software”). This EULA governs your use of the Software provided by the Licensor. By installing or using the Software, you agree to be bound by the terms of this EULA.
 
 ## License Grant
 
@@ -50,7 +50,7 @@ You agree not to, and you will not permit others to:
 
 ## Related Agreements
 
-By agreeing to this EULA, you also agree to comply with the terms of [Microsoft Commercial Marketplace Terms of Use](https://learn.microsoft.com/en-nz/legal/marketplace/marketplace-terms) and [Microsoft Privacy Policy](https://privacy.microsoft.com/en-us/privacystatement), and any other agreements incorporated herein by reference. Links to these agreements can be found on the [Street As Product Page](https://appsource.microsoft.com/en-NZ/product/DynamicsBC/PUBID.bcappslimited1693858041247%7CAID.street-as%7CPAPPID.0a89d807-b47c-487d-97ec-a1c63d794cca) within Microsoft AppSource.
+By agreeing to this EULA, you also agree to comply with the terms of [Microsoft Commercial Marketplace Terms of Use](https://learn.microsoft.com/en-nz/legal/marketplace/marketplace-terms) and [Microsoft Privacy Policy](https://privacy.microsoft.com/en-us/privacystatement), and any other agreements incorporated herein by reference. Links to these agreements can be found on the [NZ Bank Account validator Product Page](https://appsource.microsoft.com/en-NZ/product/DynamicsBC/PUBID.bcappslimited1693858041247%7CAID.nz-bank-account-validator%7CPAPPID.0a89d807-b47c-487d-97ec-a1c63d794cca) within Microsoft AppSource.
 
 ## Jurisdiction
 

@@ -6,7 +6,7 @@ comments: true
 
 # Hero section
 title: Overview
-description:  In this section you'll find basic information about the NZ Bank Account Validator, what it does and how the validation works. Read this section to help you decide if this is the right extension for you.
+description:  In this section you'll find basic information about the Bank Validator, what it does and how the validation works. Read this section to help you decide if this is the right extension for you.
 
 # Author box
 author:
@@ -28,18 +28,18 @@ page_nav:
         url: /install-guide
 ---
 
-# What is NZ Bank Account Validator?
+# What is Bank Validator?
 
-OK, this is probably not going to come as a shock, but the NZ Bank Account Validator is for validating New Zealand bank account numbers. It adds an immediate visual feedback to every page that contains a **Bank Branch No.** and **Bank Account Number** field. Namely:
+OK, this is probably not going to come as a shock, but the Bank Validator is for validating bank account numbers. Specifically New Zealand and Australian bank account numbers. It adds an immediate visual feedback to every page that contains a **Bank Branch No.** and **Bank Account Number** field. Namely:
 
 - **Bank Account Card**
 - **Vendor Bank Account Card**
 - **Customer Bank Account Card**
 - **Employee Card**
 
-In addition to the displays on the setup cards, the **Payment Journal** will show a warning if the bank account number used on the related account is not a valid New Zealand bank account.
+In addition to the displays on the setup cards, the **Payment Journal** will show a warning if the bank account number used on the related account is not in a valid New Zealand or Australian bank account number format.
 
-We don't alter the data and we don't stop you from using the bank account if it's not valid, however, the **Bank Account Validation Result** field that has been added to each of the previously listed pages shows a big bright friendly green tick if the entered number is valid according to the validation algorithm.
+We don't alter the data and we don't stop you from using the bank account if it's not valid, however, the **Bank Account Validation Result** field that has been added to each of the previously listed pages shows a big bright friendly green tick if the entered number is valid according to the validation rule that has been selected.
 
 ![Image showing a valid bank account.](/screenshots/overview/ValidBankAccount.png)
 
@@ -57,20 +57,28 @@ Here you can immediately see there's a problem with the big red cross and an exp
 
 That's just one of the many possible validation errors. It's telling us that although "01" is a valid bank in New Zealand and "0066" is a valid branch for bank "01", the account number "2134563" does not have the correct check digit at the end which is most likely caused by miskeying the number into the entry field. You can find a complete list of error messages and their meaning in the [Errors Explained](/NZBankAccountValidator/errors-explained) topic.
 
-If you want to learn more about exactly how the validation is working, take a look at the [NZ Bank Account Validation Algorithm](/NZBankAccountValidator/the-algorithm), but in summary here's what we do:
+If your business uses Australian bank account numbers, you can set the **Default Validation Rule** on the **Bank Validation Setup** page to *Australian Bank Validation* which will ensure the BSB number entered is in a valid format and matches a list of known possible values. 
+
+If you want to learn more about exactly how the validation is working, take a look at the [Bank Account Validation Rules](/NZBankAccountValidator/the-rules), but in summary here's what we do:
+
+## For the Kiwis
 
 - Ensure the entered values in the **Bank Branch No.** and **Bank Account Number** fields, when combined together match the required formatting of a New Zealand bank account number
 - Compare the bank id to a list of bank codes provided by PaymentsNZ
 - Ensure the branch number exists for the bank using the same PaymentsNZ list
 - Use the correct modulo checksum calculation for the bank to ensure the final digit of the base account number is correct for the other entered digits
 
+## For the Aussies
+
+- Ensure the entered values in the **Bank Branch No.** and **Bank Account Number** fields, when combined together match the required formatting of an Australian bank account number
+- Compare the first seven characters of the bank account number (the BSB Number) to a list of codes provided by Australian Payments Network
 
 <div class="callout callout--success">
 <p><strong>Valid vs Verified</strong></p>
 Whilst we can't guarantee the bank account number you have entered is correct, we can ensure it is valid. This will help to eliminate problems in data entry that can become very time consuming when the first indication of a problem is your bank payments get rejected.
 </div>
 
-# Bank Account Validation Setup
+# Bank Validation Setup
 
 In addition to the immediate visual feedback, we provide an ability to get an overview of which accounts are used in the system and categorise them as:
 

@@ -4,8 +4,8 @@ layout: homepage
 keywords:
 
 # Hero section
-title: NZ Bank Account Validator
-description: NZ Bank Account Validator is an extension for Microsoft Dynamics 365 Business Central that, well, validates New Zealand bank accounts.
+title: Bank Validator
+description: Bank Validator is an extension for Microsoft Dynamics 365 Business Central that validates New Zealand and Australian bank accounts numbers.
 buttons:
     - content: Overview
       icon: arrow-right
@@ -22,7 +22,7 @@ author:
 # Grid navigation
 grid_navigation:
     - title: Overview
-      excerpt: In this section you'll find basic information about the NZ Bank Account Validator, what it does and how the validation works. Read this section to help you decide if this is the right extension for you.
+      excerpt: In this section you'll find basic information about the Bank Validator, what it does and how the validation works. Read this section to help you decide if this is the right extension for you.
       cta: Read more
       url: /overview
     - title: Install Guide
@@ -30,7 +30,7 @@ grid_navigation:
       cta: Show me the Money
       url: /install-guide
     - title: The Algorithm
-      excerpt: Learn about the NZ Bank Account format and how we perform the validation.
+      excerpt: Learn about the New Zealand and Australian Bank Account formats and how we perform the validation.
       cta: Teach Me
       url: /the-algorithm
     - title: Errors Explained
@@ -46,7 +46,7 @@ grid_navigation:
       cta: Read the EULA
       url: '/eula'
     - title: Privacy Statement
-      excerpt: This page informs you of our policies regarding the collection, use, and disclosure of Personal Information we receive from users of the Street As App.
+      excerpt: This page informs you of our policies regarding the collection, use, and disclosure of Personal Information we receive from users of the Bank Validator app.
       cta: Read the privacy statement
       url: '/privacy-statement'
     - title: Get Help

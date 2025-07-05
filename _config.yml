@@ -1,10 +1,10 @@
 # Theme settings
 doks:
-    baseurl: /NZBankAccountValidator
+    baseurl: /BankValidator
     color_theme: # Available themes: blue (default), green, purple, red and yellow
     header:
         logo:
-            text: NZ Bank Account Validator
+            text: Bank Validator
             image:
         nav:
             - item_name: www.bcapps.co
@@ -15,18 +15,18 @@ doks:
               item_url: https://docs.bcapps.co
             - item_name: Log Issue
               external_url: true
-              item_url: https://github.com/BCAppsLimited/NZBankAccountValidator/issues/new/choose
+              item_url: https://github.com/BCAppsLimited/BankValidator/issues/new/choose
     footer:
         content:
             logo:
-                text: NZ Bank Account Validator
+                text: Bank Validator
                 image: false
             copyright: Copyright &copy; 2025. - BC Apps Limited <br>All rights reserved.
         social_list:
             - network_name: home
               profile_url: https://www.bcapps.co
             - network_name: github
-              profile_url: https://github.com/BCAppsLimited/NZBankAccountValidator
+              profile_url: https://github.com/BCAppsLimited/BankValidator
     google_analytics:
         tracking_code: # Add your Google Analytics tracking code to activate Google Analytics
     comments:
