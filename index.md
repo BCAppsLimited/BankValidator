@@ -29,10 +29,10 @@ grid_navigation:
       excerpt: Read this section for details on how to install the app and buy the licenses.
       cta: Show me the Money
       url: /install-guide
-    - title: The Algorithm
+    - title: Validation Rules
       excerpt: Learn about the New Zealand and Australian Bank Account formats and how we perform the validation.
       cta: Teach Me
-      url: /the-algorithm
+      url: /the-rules
     - title: Errors Explained
       excerpt: A summary of the validation messages and some clues as to probably what went wrong.
       cta: Explain It to Me

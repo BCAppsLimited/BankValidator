@@ -24,8 +24,8 @@ page_nav:
         content: Overview
         url: /overview
     next:
-        content: The Algorithm
-        url: /the-algorithm
+        content: Validation Rules
+        url: /the-rules
 ---
 
 # Installation
