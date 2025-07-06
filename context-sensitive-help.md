@@ -36,7 +36,7 @@ The **Bank Account Card** has been modified to show a **Bank Account Validation 
 
 There are no setup fields to configure on the **Bank Account Validation Setup** but you can think of this page as the control centre for bank account validation. You can use this page to get an overview of the state of bank accounts, manage the Bank Branch Register data, and refresh the validation status of all accounts.
 
-To learn more about his page, see the [Bank Account Validation Setup section in Overview topic](/NZBankAccountValidator/overview/#bank-account-validation-setup).
+To learn more about his page, see the [Bank Account Validation Setup section in Overview topic](/BankValidator/overview/#bank-account-validation-setup).
 
 # Customer Bank Account Card
 
@@ -73,7 +73,7 @@ The **NZ Bank Accounts** page shows the list of results from the validation of b
 |---------------------------|-------------|
 | Used On | Identifies the table and key fields of the record that contains the back account. Click this field to navigate to relevant bank account card. |
 | Full Bank Account | The normalised full bank account number.[^1] |
-| Status | The result of the validation. For an explanation of the values, see the section for the matching Result Status in the [Errors Explained](/NZBankAccountValidator/errors-explained) topic. |
+| Status | The result of the validation. For an explanation of the values, see the section for the matching Result Status in the [Errors Explained](/BankValidator/errors-explained) topic. |
 | Used Count | The count of records that are using the same bank account number. Any record that shows a value here that is greater than one is a duplicate. |
 | Validity Last Checked | The date and time the validity of this bank account was last checked. |
 | First Used | The date and time this bank account value was first used for the related **Used On** record. |
@@ -100,7 +100,7 @@ To allow you to skip validation for blocked customers or vendors, we have added 
 
 Prior to beginning the validation, the process will check the current Bank Branch Register file against the last imported file and, if there is a later file available, the new file will be imported to update the **NZ Bank** and **NZ Bank Branch** tables that are used for validation.
 
-For each matching record found, the system will validate the combination of **Bank Branch No.** and **Bank Account No.** using the [validation algorithm](/NZBankAccountValidator/the-algorithm). Any records where both the **Bank Branch No.** and **Bank Account No.** fields are blank will be skipped, but other validation results will write a record showing the results of the validation to the **NZ Bank Account** table which you can review on the **NZ Bank Accounts** page. The process can be scheduled to run on a recurring basis and we recommend doing this in order to ensure the Bank Branch Register data is kept up to date. 
+For each matching record found, the system will validate the combination of **Bank Branch No.** and **Bank Account No.** using the [validation rules](/BankValidator/the-rules). Any records where both the **Bank Branch No.** and **Bank Account No.** fields are blank will be skipped, but other validation results will write a record showing the results of the validation to the **NZ Bank Account** table which you can review on the **NZ Bank Accounts** page. The process can be scheduled to run on a recurring basis and we recommend doing this in order to ensure the Bank Branch Register data is kept up to date. 
 
 ---
 

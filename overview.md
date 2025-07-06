@@ -55,15 +55,11 @@ Here you can immediately see there's a problem with the big red cross and an exp
 
 ❌ The Bank Account "01-0066-2134563-00" is not valid for Bank ID "01" and Branch "0066".
 
-That's just one of the many possible validation errors. It's telling us that although "01" is a valid bank in New Zealand and "0066" is a valid branch for bank "01", the account number "2134563" does not have the correct check digit at the end which is most likely caused by miskeying the number into the entry field. You can find a complete list of error messages and their meaning in the [Errors Explained](errors-explained) topic.
-
-[errors-explained](errors-explained)
-[/errors-explained](/errors-explained)
-[/BankValidator/errors-explained](/BankValidator/errors-explained) topic.
+That's just one of the many possible validation errors. It's telling us that although "01" is a valid bank in New Zealand and "0066" is a valid branch for bank "01", the account number "2134563" does not have the correct check digit at the end which is most likely caused by miskeying the number into the entry field. You can find a complete list of error messages and their meaning in the [Errors Explained](/BankValidator/errors-explained) topic.
 
 If your business uses Australian bank account numbers, you can set the **Default Validation Rule** on the **Bank Validation Setup** page to *Australian Bank Validation* which will ensure the BSB number entered is in a valid format and matches a list of known possible values. 
 
-If you want to learn more about exactly how the validation is working, take a look at the [Bank Account Validation Rules](/NZBankAccountValidator/the-rules), but in summary here's what we do:
+If you want to learn more about exactly how the validation is working, take a look at the [Bank Account Validation Rules](/BankValidator/the-rules), but in summary here's what we do:
 
 ## For the Kiwis
 
@@ -140,5 +136,5 @@ This extension is fully featured and completely free to use in a sandbox environ
 
 It seems too good to be true, but if you decide to go ahead with our extension in your Production environment, you will get *another* free trial. You will need to purchase and assign licenses to your users, but you will not be charged for the first thirty days of use, and when your subscription does start to appear on your bill, you can cancel at any time. All licenses are managed through your Microsoft 365 Admin center and billed directly to you as part of your regular Microsoft Invoice (or can be bought using a credit card if you prefer).
 
-NZ Bank Account Validator is available through [Microsoft's AppSource](https://appsource.microsoft.com/en-NZ/marketplace/apps?product=dynamics-365%3Bdynamics-365-business-central&page=1) and just in case you're not sure how to get started and install the product, checkout our [Install Guide](/NZBankAccountValidator/install-guide).
+NZ Bank Account Validator is available through [Microsoft's AppSource](https://appsource.microsoft.com/en-NZ/marketplace/apps?product=dynamics-365%3Bdynamics-365-business-central&page=1) and just in case you're not sure how to get started and install the product, checkout our [Install Guide](/BankValidator/install-guide).
 

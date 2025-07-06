@@ -32,7 +32,7 @@ page_nav:
 
 This section contains a heading for each of the possible errors you might encounter when a bank account number fails to validate. The messages are in the order that the validations are performed.
 
-Most of the messages will refer to parts of the entered bank account number as the part having the problem. The [The Algorithm](/NZBankAccountValidator/the-algoithm) topic explains how the account number is made up of different parts. In this section we will use the following syntax for the full bank account number:
+Most of the messages will refer to parts of the entered bank account number as the part having the problem. The [The Rules](/BankValidator/the-rules) topic explains how the account number is made up of different parts. In this section we will use the following syntax for the full bank account number:
 
 The Full Bank Account Number should be in the format **BB**-**bbbb**-**AAAAAAA**-**SSS**, where 
 
