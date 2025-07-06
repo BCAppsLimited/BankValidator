@@ -32,7 +32,7 @@ grid_navigation:
     - title: Validation Rules
       excerpt: Learn about the New Zealand and Australian Bank Account formats and how we perform the validation.
       cta: Teach Me
-      url: /the-rules
+      url: /validation-rules
     - title: Errors Explained
       excerpt: A summary of the validation messages and some clues as to probably what went wrong.
       cta: Explain It to Me

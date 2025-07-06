@@ -100,7 +100,7 @@ To allow you to skip validation for blocked customers or vendors, we have added 
 
 Prior to beginning the validation, the process will check the current Bank Branch Register file against the last imported file and, if there is a later file available, the new file will be imported to update the **NZ Bank** and **NZ Bank Branch** tables that are used for validation.
 
-For each matching record found, the system will validate the combination of **Bank Branch No.** and **Bank Account No.** using the [validation rules](/BankValidator/the-rules). Any records where both the **Bank Branch No.** and **Bank Account No.** fields are blank will be skipped, but other validation results will write a record showing the results of the validation to the **NZ Bank Account** table which you can review on the **NZ Bank Accounts** page. The process can be scheduled to run on a recurring basis and we recommend doing this in order to ensure the Bank Branch Register data is kept up to date. 
+For each matching record found, the system will validate the combination of **Bank Branch No.** and **Bank Account No.** using the [validation rules](/BankValidator/validation-rules). Any records where both the **Bank Branch No.** and **Bank Account No.** fields are blank will be skipped, but other validation results will write a record showing the results of the validation to the **NZ Bank Account** table which you can review on the **NZ Bank Accounts** page. The process can be scheduled to run on a recurring basis and we recommend doing this in order to ensure the Bank Branch Register data is kept up to date. 
 
 ---
 

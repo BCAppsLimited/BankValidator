@@ -25,7 +25,7 @@ page_nav:
         url: /overview
     next:
         content: Validation Rules
-        url: /the-rules
+        url: /validation-rules
 ---
 
 # Installation
