@@ -21,8 +21,8 @@ micro_nav: true
 # Page navigation
 page_nav:
     prev:
-        content: The Algorithm
-        url: /the-algorithm
+        content: Validation Rules
+        url: /the-rules
     next:
         content: Context Sensitive Help
         url: /context-sensitive-help
