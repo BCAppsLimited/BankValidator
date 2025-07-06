@@ -55,7 +55,11 @@ Here you can immediately see there's a problem with the big red cross and an exp
 
 ❌ The Bank Account "01-0066-2134563-00" is not valid for Bank ID "01" and Branch "0066".
 
-That's just one of the many possible validation errors. It's telling us that although "01" is a valid bank in New Zealand and "0066" is a valid branch for bank "01", the account number "2134563" does not have the correct check digit at the end which is most likely caused by miskeying the number into the entry field. You can find a complete list of error messages and their meaning in the [Errors Explained](/NZBankAccountValidator/errors-explained) topic.
+That's just one of the many possible validation errors. It's telling us that although "01" is a valid bank in New Zealand and "0066" is a valid branch for bank "01", the account number "2134563" does not have the correct check digit at the end which is most likely caused by miskeying the number into the entry field. You can find a complete list of error messages and their meaning in the [Errors Explained](errors-explained) topic.
+
+[errors-explained](errors-explained)
+[/errors-explained](/errors-explained)
+[/BankValidator/errors-explained](/BankValidator/errors-explained) topic.
 
 If your business uses Australian bank account numbers, you can set the **Default Validation Rule** on the **Bank Validation Setup** page to *Australian Bank Validation* which will ensure the BSB number entered is in a valid format and matches a list of known possible values. 
 
