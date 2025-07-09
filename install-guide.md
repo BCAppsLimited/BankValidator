@@ -32,7 +32,7 @@ page_nav:
 
 ## Free Trial
 
-The NZ Bank Account Validator app is available with a free trial through [Microsoft's AppSource](https://appsource.microsoft.com/en-NZ/marketplace/apps?product=dynamics-365%3Bdynamics-365-business-central&page=1). Simply visit the [NZ Bank Account Validator Product Page](https://appsource.microsoft.com/en-NZ/product/DynamicsBC/PUBID.bcappslimited1693858041247%7CAID.nz-bank-account-validator%7CPAPPID.0a89d807-b47c-487d-97ec-a1c63d794cca) on AppSource.
+The Bank Validator app is available with a free trial through [Microsoft's AppSource](https://appsource.microsoft.com/en-NZ/marketplace/apps?product=dynamics-365%3Bdynamics-365-business-central&page=1). Simply visit the [Bank Validator Product Page](https://appsource.microsoft.com/en-NZ/product/DynamicsBC/PUBID.bcappslimited1693858041247%7CAID.nz-bank-account-validator%7CPAPPID.0a89d807-b47c-487d-97ec-a1c63d794cca) on AppSource.
 
 ## Purchase
 
