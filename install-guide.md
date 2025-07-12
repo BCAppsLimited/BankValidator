@@ -32,13 +32,13 @@ page_nav:
 
 ## Free Trial
 
-The Bank Validator app is available with a free trial through [Microsoft's AppSource](https://appsource.microsoft.com/en-NZ/marketplace/apps?product=dynamics-365%3Bdynamics-365-business-central&page=1). Simply visit the [Bank Validator Product Page](https://appsource.microsoft.com/en-NZ/product/DynamicsBC/PUBID.bcappslimited1693858041247%7CAID.nz-bank-account-validator%7CPAPPID.0a89d807-b47c-487d-97ec-a1c63d794cca) on AppSource.
+The Bank Validator app is available with a free trial through [Microsoft's AppSource](https://appsource.microsoft.com/en-NZ/marketplace/apps?product=dynamics-365%3Bdynamics-365-business-central&page=1). Simply visit the [Bank Validator Product Page](https://appsource.microsoft.com/en-NZ/product/DynamicsBC/PUBID.bcappslimited1693858041247%7CAID.bank-validator%7CPAPPID.0a89d807-b47c-487d-97ec-a1c63d794cca) on AppSource.
 
 ## Purchase
 
 If you've already installed the product and assigned licenses, you can skip ahead to the [Configuration](#configuration) section.
 
-Street As is available with a free trial through [Microsoft's AppSource](https://appsource.microsoft.com/en-NZ/marketplace/apps?product=dynamics-365%3Bdynamics-365-business-central&page=1).
+Bank Validator is available with a free trial through [Microsoft's AppSource](https://appsource.microsoft.com/en-NZ/marketplace/apps?product=dynamics-365%3Bdynamics-365-business-central&page=1).
 
 You *can* begin the install procedure from within Business Central, but we recommend you start from the [Street As Product Page](https://appsource.microsoft.com/en-NZ/product/DynamicsBC/PUBID.bcappslimited1693858041247%7CAID.street-as%7CPAPPID.0a89d807-b47c-487d-97ec-a1c63d794cca) on AppSource.
 

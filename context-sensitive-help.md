@@ -30,11 +30,11 @@ page_nav:
 
 # AU Bank State Branches
 
-
+The **AU Bank State Branches** page shows the BSB numbers that have been downloaded as source data for the Australian Bank Validation from the Australian Payments Network. The page serves no real purpose other than to let you see the data that is being used to validate your bank accounts.
 
 # Bank Account Card
 
-The **Bank Account Card** has been modified to show a **Bank Account Validation Result** field immediately after the **Bank Account No.** field on the **General** tab. If you do not see this field, it could be because you are in a Production environment and you do not have a license assigned. The value of this new field will show the results of attempting to validate the data in the **Bank Branch No.** and **Bank Account No.** fields. The validation is performed as soon as the page data is loaded and is re-validated whenever you edit the values in either the **Bank Branch No.** or **Bank Account No.** fields. You do not need to take action to perform the validation as this is handled automatically. The **Bank Account Validation Result** field is for information only and will not prevent any actions using the bank account record.
+The **Bank Account Card** has been modified to show a **Bank Account Validation Result** field immediately after the **Bank Account No.** field on the **General** tab. If you do not see this field, it could be because you are in a Production environment and you do not have a license assigned or possibly the Bank Validator extension has not been activated. The value of this new field will show the results of attempting to validate the data in the **Bank Branch No.** and **Bank Account No.** fields. The validation is performed as soon as the page data is loaded and is re-validated whenever you edit the values in either the **Bank Branch No.** or **Bank Account No.** fields. You do not need to take action to perform the validation as this is handled automatically. The **Bank Account Validation Result** field is for information only and will not prevent any actions using the bank account record.
 
 # Bank Validator Setup
 
@@ -85,6 +85,14 @@ The **Customer Bank Account Card** has been modified to show a **Bank Account Va
 
 The **Employee Card** has been modified to show a **Bank Account Validation Result** field immediately after the **Bank Account No.** field on the **Payments** tab. If you do not see this field, it could be because you are in a Production environment and you do not have a license assigned. The value of this new field will show the results of attempting to validate the data in the **Bank Branch No.** and **Bank Account No.** fields. The validation is performed as soon as the page data is loaded and is re-validated whenever you edit the values in either the **Bank Branch No.** or **Bank Account No.** fields. You do not need to take action to perform the validation as this is handled automatically. The **Bank Account Validation Result** field is for information only and will not prevent any actions using the bank account record.
 
+# NZ Bank Branches
+
+The **NZ Bank Branches** page shows all of the branches that have been imported from the PaymentsNZ Bank Branch Register file. The page serves no real purpose other than to let you see the data that is being used to validate your bank accounts.
+
+# NZ Banks
+
+The **NZ Banks** page shows all of the unique banks that have been imported from the PaymentsNZ Bank Branch Register file. Each bank also shows the validation algorithm that will be used to determine if the bank's check digit is correct. There is a drill down field showing a count of the number of branches associated with this bank. Use the drill down to show the related branches. 
+
 # Payment Journal
 
 The **Payment Journal** page has been modified to show a **Bank Account Validation Result** field immediately after the **Recipient Bank Account** field. If you do not see this field, it could be because you are in a Production environment and you do not have a license assigned. The value of this new field will show the results of attempting to validate the data in the **Bank Branch No.** and **Bank Account No.** fields from the related recipient bank account. The fields being validated will depend on the **Account Type** field as follows:
@@ -104,6 +112,21 @@ The **Payment Journal** page has been modified to show a **Bank Account Validati
 
 The **Vendor Bank Account Card** has been modified to show a **Bank Account Validation Result** field immediately after the **Bank Account No.** field on the **General** tab. If you do not see this field, it could be because you are in a Production environment and you do not have a license assigned. The value of this new field will show the results of attempting to validate the data in the **Bank Branch No.** and **Bank Account No.** fields. The validation is performed as soon as the page data is loaded and is re-validated whenever you edit the values in either the **Bank Branch No.** or **Bank Account No.** fields. You do not need to take action to perform the validation as this is handled automatically. The **Bank Account Validation Result** field is for information only and will not prevent any actions using the bank account record.
 
+# Validate Bank Accounts
+
+The **Validate Bank Accounts** processing job is a report with no layout that will allow you to filter on the tables that will be validated, namely:
+
+- Bank Account
+- Customer Bank Account
+- Vendor Bank Account
+- Employee
+
+To allow you to skip validation for blocked customers or vendors, we have added a **Customer Blocked** and **Vendor Blocked** field which allows you to only validate customer or vendor bank accounts when the related customer or vendor matches the filter.
+
+Prior to beginning the validation, the process will check the current validation source data files against the last imported files and, if there is a later file available, the new file will be imported to update the validation source data.
+
+For each matching record found, the system will validate the combination of **Bank Branch No.** and **Bank Account No.** using the [validation rules](/BankValidator/validation-rules). Any records where both the **Bank Branch No.** and **Bank Account No.** fields are blank will be skipped, but other validation results will write a record showing the results of the validation to the **NZ Bank Account** table which you can review on the **NZ Bank Accounts** page. The process can be scheduled to run on a recurring basis and we recommend doing this in order to ensure the Bank Branch Register data is kept up to date. 
+
 # Validated Bank Accounts
 
 The **Validated Bank Accounts** page shows the list of results from the validation of bank account fields.
@@ -121,30 +144,18 @@ The **Validated Bank Accounts** page shows the list of results from the validati
 
 # Validated Bank Account Card
 
+The **Validated Bank Account Card** is launched by clicking the contents of the **Bank Account Validation Result** field on any of the following pages:
 
+- Bank Account Card
+- Customer Bank Account Card
+- Vendor Bank Account Card
+- Employee Card
 
-# NZ Bank Branches
+![Image showing a validated bank account.](/screenshots/contexthelp/ValidatedBankAccount.png)
 
-The **NZ Bank Branches** page shows all of the branches that have been imported from the PaymentsNZ Bank Branch Register file. The page serves no real purpose other than to let you see the data that is being used to validate your bank accounts.
+The main purpose of the page is to allow you to change the Validation Rule that should be used for this particular bank account.
 
-# NZ Banks
-
-The **NZ Banks** page shows all of the unique banks that have been imported from the PaymentsNZ Bank Branch Register file. Each bank also shows the validation algorithm that will be used to determine if the bank's check digit is correct. There is a drill down field showing a count of the number of branches associated with this bank. Use the drill down to show the related branches. 
-
-# Validate Bank Accounts
-
-The **Validate Bank Accounts** processing job is a report with no layout that will allow you to filter on the tables that will be validated, namely:
-
-- Bank Account
-- Customer Bank Account
-- Vendor Bank Account
-- Employee
-
-To allow you to skip validation for blocked customers or vendors, we have added a **Customer Blocked** and **Vendor Blocked** field which allows you to only validate customer or vendor bank accounts when the related customer or vendor matches the filter.
-
-Prior to beginning the validation, the process will check the current validation source data files against the last imported files and, if there is a later file available, the new file will be imported to update the validation source data.
-
-For each matching record found, the system will validate the combination of **Bank Branch No.** and **Bank Account No.** using the [validation rules](/BankValidator/validation-rules). Any records where both the **Bank Branch No.** and **Bank Account No.** fields are blank will be skipped, but other validation results will write a record showing the results of the validation to the **NZ Bank Account** table which you can review on the **NZ Bank Accounts** page. The process can be scheduled to run on a recurring basis and we recommend doing this in order to ensure the Bank Branch Register data is kept up to date. 
+It's also useful to see the full validation result message in a large text box.
 
 ---
 
