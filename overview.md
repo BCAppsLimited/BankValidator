@@ -63,14 +63,14 @@ If you want to learn more about exactly how the validation is working, take a lo
 
 ## For the Kiwis
 
-- Ensure the entered values in the **Bank Branch No.** and **Bank Account Number** fields, when combined together match the required formatting of a New Zealand bank account number
+- Ensure the entered values in the **Bank Branch No.** and **Bank Account Number** fields, when combined together, match the required formatting of a New Zealand bank account number
 - Compare the bank id to a list of bank codes provided by PaymentsNZ
 - Ensure the branch number exists for the bank using the same PaymentsNZ list
 - Use the correct modulo checksum calculation for the bank to ensure the final digit of the base account number is correct for the other entered digits
 
 ## For the Aussies
 
-- Ensure the entered values in the **Bank Branch No.** and **Bank Account Number** fields, when combined together match the required formatting of an Australian bank account number
+- Ensure the entered values in the **Bank Branch No.** and **Bank Account Number** fields, when combined together, match the required formatting of an Australian bank account number
 - Compare the first seven characters of the bank account number (the BSB Number) to a list of codes provided by Australian Payments Network
 
 ## What is Validation?
