@@ -44,15 +44,27 @@ As the name suggests, all new bank accounts will be validated using the default 
 
 You can think of this page as the control centre for bank account validation. You can use this page to get an overview of the state of bank accounts, manage the validation rule source data, and refresh the validation status of all accounts.
 
-To learn more about his page, see the [Bank Account Validation Setup section in Overview topic](/BankValidator/overview/#bank-account-validation-setup).
+The **Bank Validator Setup** page has three sections:
 
-The **Bank Validator Setup** page has three sections as described below.
+- [Validation](#validation)
+- [Validation Rule Source Data](#validation-rule-source-data)
+- [Validation Results](#validation-results)
 
 ## Validation
 
-The **Validation** group at the top of the page is where you select the default validation rule and activate the app. It also shows the date and time the **Validation Last Ran At**.
+![Image showing the validation group at the top of the Bank Validator Setup page.](/screenshots/contexthelp/BankValidatorSetupValidation.png)
+
+The **Validation** group at the top of the page is where you select the **Default Validation Rule** and **Activate** the app. It also shows the date and time the **Validation Last Ran At**.
+
+You will not be able to change the **Default Validation Rule** if the **Active** toggle is on.
+
+Use the drop-down to select a **Default Validation Rule**. If your company is Australian, you should select *Australian Bank Validation*. If your company is New Zealand, you should select *New Zealand Bank Validation*. You must select a default validation rule other than *No Validation* to be able to continue.
+
+Once you have selected your default validation rule, click the **Activate** toggle control. You will notice that the **Default Validation Rule** is greyed out and can no longer be changed.
 
 ## Validation Rule Source Data
+
+![Image showing the validation rule source data subpage on the Bank Validator Setup page.](/screenshots/contexthelp/BankValidatorSetupValidationRuleSourceData.png)
 
 This subpage includes a line for each source of data that is used as part of a validation rule. The fields are explained below.
 
@@ -66,7 +78,11 @@ This subpage includes a line for each source of data that is used as part of a v
 | Last Imported At | Specifies the date and time when the validation rule source data was last imported. |
 | Last Imported File Unique Identifier | Specifies the unique identifier of the file that was last imported for this validation rule source data. This could be a file name or an ETag. It is used to determine whether the system needs to pull down newer data from the data provider. |
 
+You can use this part to drill-down into the validation source data records such as the [NZ Banks](#nz-banks), [NZ Bank Branches](#nz-bank-branches), or [AU Bank State Branches](#au-bank-state-branches) by clicking on the associated **Record Count** for each line.
+
 ## Validation Results
+
+![Image showing the validation results on the Bank Validator Setup page.](/screenshots/contexthelp/BankValidatorSetupValidationResults.png)
 
 The validation results are shown in the FactBox pane as a series of tiles or "cues". Each cue shows the number of bank accounts that have been validated grouped by a particular state. The cues and their meaning is shown below.
 
@@ -76,6 +92,8 @@ The validation results are shown in the FactBox pane as a series of tiles or "cu
 | Valid Accounts with Duplicates | Specifies the number of bank accounts found during validation that are valid but have been used more than once in the system. |
 | Invalid Accounts | Specifies the number of bank accounts found during validation that are invalid. |
 | All Accounts | Specifies the number of bank accounts found during validation. |
+
+Clicking on any cue will take you to the [Validated Bank Accounts](#validated-bank-accounts) list with a filter applied to only show the accounts that correspond to the cue.
 
 # Customer Bank Account Card
 
@@ -131,6 +149,9 @@ For each matching record found, the system will validate the combination of **Ba
 
 The **Validated Bank Accounts** page shows the list of results from the validation of bank account fields.
 
+![Image showing the Validated Bank Accounts list page.](/screenshots/contexthelp/ValidatedBankAccounts.png)
+
+
 | Field                     | Description |
 |---------------------------|-------------|
 | Used On | Identifies the table and key fields of the record that contains the back account. Click this field to navigate to relevant bank account card. |
@@ -141,6 +162,42 @@ The **Validated Bank Accounts** page shows the list of results from the validati
 | Validity Last Checked | The date and time the validity of this bank account was last checked. |
 | First Used | The date and time this bank account value was first used for the related **Used On** record. |
 | History Count | The number of different accounts that have been used for the related **Used On** record. Use the drill-down on this field to show the historical records. |
+
+From the previous image you can see that each bank account that has been validated (we do not show bank accounts where neither the **Bank Branch No.** nor the **Bank Account No.** fields were entered) is listed with a **Status** and a colour coding. The meaning of the colour coding is as follows:
+
+| Style Name | Style | Meaning |
+|-------|--------|---------|
+| Subordinate | Grey | This is not the current bank account used on this record and shows historical values. Historical values are not shown on the main NZ Bank Accounts page but can be seen by drilling down on the **History Count** field. |
+| Favourable | Bold + Green | The account is valid. |
+| Ambiguous | Yellow | The account is valid but the Used Count is more than one, meaning the same bank account number has been used in multiple places. |
+| Unfavourable | Bold + Italic + Red | The account is not valid. Use the **Status** field or navigate to the **Used On** record for more details. |
+
+The **Bank Validator Setup** has some actions that can be used to update the status of all accounts or manually refresh the Bank Branch Register data and BSB Dictionary. These actions are described in the following sub-topics.
+
+## Validate Action
+
+This action will validate all accounts giving you an overview of how many accounts there are and whether they are valid or not. It will also attempt to update the validation source data by pulling the latest files from the data provider. Because of the update of source data feature, we recommend you schedule this process to run at least once a week to keep the validation source data up to date. See the [Schedule Validation](/BankValidator/install-guide/#schedule-validation) section in the configuration section of the install guide help topic.
+
+Select the **Validate** action and you will be presented with the options page for the **Validate Bank Accounts** process.
+
+![Image showing the options for the Validate Bank Accounts process.](/screenshots/install/ValidateBankAccountsProcess.png)
+
+You can use this options page to filter on accounts to be validated (for example you can exclude blocked accounts), or to schedule the process to run on an automated basis.
+
+Results of the validation will be stored and the FactBox cues will be updated to reflect the new totals.
+
+We recommend scheduling this process to run once a day or once a week automatically and then manually opening the **Bank Validator Setup** page to check there are no invalid bank accounts in the system.
+
+
+## Refresh Data Action
+
+Select the **Refresh Data** action to trigger a check of the source data used for the validation process which includes the Bank Branch Register data provided by PaymentsNZ and the BSB Directory provided by the Australian Payments Network. The remote data sources will be compared with the copy of the data loaded into Business Central. Every time this process is run (either manually via this action or automatically as part of the **Validate** action), the file name or ETag is checked first and if we have already loaded the file with the same name, the system will do nothing. If the file provided by the data provider is different to the file we have previously loaded, the new file will be downloaded and imported.
+
+The **Record Count** field on each of the data sources shows the result of the import. You can click the drill-down on the **Record Count** field to show the records that are used in the validation routines.  
+
+## Restore Data Action
+
+You should never need to select this option. The Bank Validator includes the latest PaymentsNZ Bank Branch Register and Australian Payments Network BSB Directory data which will be available as soon as the extension is installed. Select the **Restore Data** action to force the system to overwrite whatever validation source data is in the system with the data that came with the application.
 
 # Validated Bank Account Card
 
