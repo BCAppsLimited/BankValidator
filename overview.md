@@ -113,5 +113,5 @@ This extension is fully featured and completely free to use in a sandbox environ
 
 It seems too good to be true, but if you decide to go ahead with our extension in your Production environment, you will get *another* free trial. You will need to purchase and assign licenses to your users, but you will not be charged for the first thirty days of use, and when your subscription does start to appear on your bill, you can cancel at any time. All licenses are managed through your Microsoft 365 Admin center and billed directly to you as part of your regular Microsoft Invoice (or can be bought using a credit card if you prefer).
 
-Bank Validator is available through [Microsoft's AppSource](https://appsource.microsoft.com/en-NZ/marketplace/apps?product=dynamics-365%3Bdynamics-365-business-central&page=1) and just in case you're not sure how to get started and install the product, checkout our [Install Guide](/BankValidator/install-guide).
+Bank Validator is available through [Microsoft's AppSource](https://appsource.microsoft.com/en-us/product/dynamics-365-business-central/PUBID.bcappslimited1693858041247%7CAID.bank-validator%7CPAPPID.fa1777cb-c986-48cb-8ba4-614e101a63b6?tab=Overview) and just in case you're not sure how to get started and install the product, checkout our [Install Guide](/BankValidator/install-guide).
 
