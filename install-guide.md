@@ -32,7 +32,7 @@ page_nav:
 
 ## Unlimited Free Trial in a Sandbox
 
-The best way to get started with Bank Validator is to install it in a Sandbox environment as this will allow you to use the app without restrictions without purchasing or assigning any licenses.
+The best way to get started with Bank Validator is to install it in a Sandbox environment as this will allow you to use the app without restrictions and does not require purchasing or assigning licenses.
 
 Open your Business Central Sandbox environment and use the Alt+Q keypress or click the Search icon in the toolbar to bring up the search dialog which says *Tell me what you want to do* at the top of box. Type *appsource* in the box and you will see an option for **Microsoft AppSource apps**.
 
@@ -78,9 +78,15 @@ If you have SUPER or SUPER (DATA) then you'll be able to run the configuration p
 
 We have used implicit permissions throughout the application to ensure that if a user has access to the pages that show realtime validation of **Bank Branch No.** and **Bank Account No.** fields, they will not require additional configuration or permissions.
 
-If you want to assign a permission set that has the rights to run the **Bank Validator Setup** page and other setup actions, you can use the **BC_BV_ADM** permission set.
+There are three levels of user permissions available.
 
-Note that in a production environment, the **Bank Validation Result** field will only show if a user has a valid license assigned to their user account.
+| Permission Set | Description |
+|----------------|-------------|
+| \<None\>         | A regular user with no special permission sets assigned can view the **Bank Validation Result** field[^1] and use the drill-down on the field to change the **Validation Rule** for a particular account. |
+| BC_BV_USR      | An advanced user can do everything in the extension with the exception of modifying the fields on the **Bank Validator Setup** page. This means they can run the **Validate Bank Accounts** process, refresh the validation rule source data, and review the source data such as NZ Banks, NZ Bank Branches, or AU Bank State Branches. |
+| BC_BV_ADM      | An administrator user can do everything in the extension, including toggling the **Active** field on the **Bank Validator Setup** and changing the **Default Validation Rule**. |
+
+If you want to assign a permission set that has the rights to run the **Bank Validator Setup** page and other setup actions, you can use the **BC_BV_ADM** permission set.
 
 ## Bank Validator Setup
 
@@ -92,9 +98,9 @@ Select the option to launch the **Bank Validator Setup** page. The page will loo
 
 ![Image showing the Bank Validator Setup page.](/screenshots/install/BankValidatorSetup.png)
 
-Use the drop-down to select a **Default Validation Rule**. If your company is Australian, you should select *Australian Bank Validation*. If your company is New Zealand, you should select *New Zealand Bank Validation*. You must select a default validation rule other than *No Validation* to be able to continue.
+Use the drop-down to select a **Default Validation Rule**. If your company is Australian, you should select *Australian Bank Validation*. If your company is a New Zealand company, you should select *New Zealand Bank Validation*. You must select a default validation rule other than *No Validation* to be able to continue.
 
-Once you have selected your default validation rule, click the **Activate** toggle control. You will notice that the **Default Validation Rule** is greyed out and can no longer be changed.
+Once you have selected your default validation rule, click the **Active** toggle control. You will notice that the **Default Validation Rule** is greyed out and can no longer be changed.
 
 The configuration is complete and users will now see the **Bank Validation Result** field on every page that shows a bank account.
 
@@ -124,43 +130,20 @@ The previous image shows the settings for the report to run every Saturday at 3:
 
 ## Assign Licenses
 
-If you didn't click the option from the previous step or you want to assign existing licenses, go to the [Microsoft 365 Admin Center](https://admin.microsoft.com/). Note that external users such as delegated admin agents, help desk agents, and admin partners will be assigned a free license automatically.
+When you're ready to use Bank Validator in your Production environment, you will need to buy and assign at least one license. After you have bought your first license for Bank Validator, you can purchase additional licenses from the [Microsoft 365 Admin Center](https://admin.microsoft.com/#/subscriptions), however for your first license purchase you must use the [Bank Validator page on AppSource](https://appsource.microsoft.com/en-us/product/dynamics-365-business-central/PUBID.bcappslimited1693858041247%7CAID.bank-validator%7CPAPPID.fa1777cb-c986-48cb-8ba4-614e101a63b6?tab=Overview). Navigate to the Bank Validator product page on AppSource and click the **Buy now** button.
 
-![Image showing the Microsoft 365 admin center licenses page.](/screenshots/gettingstarted/StreetAsGettingStartedAssignLicenses.png)
+![Image showing the AppSource page for Bank Validator with the Buy Now button.](/screenshots/install/AppSourceBuyNow.png)
 
-Click the link to open the Street As - Standard license assignment page. You should see the option to assign licenses to a user or to install the product.
+You will be guided through the various steps in order to select a **Plan**, choose **Price + billing**, confirm your **Payment** method, and finally **Complete purchase**. If you made it through these steps, you should see the final screen thanking you for your purchase and offering to take you to the Assign licenses page.
 
-![Image showing the Microsoft 365 admin center assign licenses page.](/screenshots/gettingstarted/StreetAsGettingStartedAssignLicensesAssign.png)
+![Image showing the final step of the license purchase from AppSource](/screenshots/install/AppSourceThankyouForPurchase.png)
 
-Click the **Assign licenses** link to proceed to the next step.
+Note that external users such as delegated admin agents, help desk agents, and admin partners will be assigned a free license automatically.
 
-![Image showing the Microsoft 365 admin center assign licenses to users page.](/screenshots/gettingstarted/StreetAsGettingStartedAssignLicensesAssignUsers.png)
-
-Type the name of the user you want to assign the license to in the search box and with the correct user selected, click the **Assign** button to compete the process. You will be returned to the previous page where you can will see which users have a license assigned. 
-
-![Image showing the Microsoft 365 admin center assign licenses page after the licenses have been assigned.](/screenshots/gettingstarted/StreetAsGettingStartedAssignLicensesAfterAssign.png)
+You can follow the [Microsoft Learn topic on assigning licenses](https://learn.microsoft.com/en-us/microsoft-365/admin/manage/assign-licenses-to-users?view=o365-worldwide) for more details on the steps for applying licenses.
 
 If you wish to purchase more licenses in future for this product, you can do so from within the Microsoft 365 admin center page without needing to visit AppSource. You can trigger the install of the app by clicking the **Install this product** link. The system will sign you in to Business Central and take you to the Extension Installation page.
 
-## Install
-
-![Image showing the Business Central Extension Installation page.](/screenshots/gettingstarted/StreetAsGettingStartedInstallWarning.png)
-
-Click the **Install** button to begin the install. A helpful message showing that the installation is in progress will be displayed and that you can continue working will the extension is installed.
-
-![Image showing the Business Central extension is installing message page.](/screenshots/gettingstarted/StreetAsGettingStartedInstalling.png)
-
-After a short while (assuming you didn't go off and do something else), the system will show you a message telling you that the app is installed.
-
-![Image showing the Business Central extension app is installed message page.](/screenshots/gettingstarted/StreetAsGettingStartedAppIsInstalled.png)
-
-Congratulations! You have successfully installed the app. Let's go ahead and set it up.
-
-
 ---
 
-[^1]: There are currently 66 pages with updated address fields. If you find a page that you would like to be included, please log an issue by clicking the LOG ISSUE link at the top right of this page (a github user account is required to log an issue).
-[^2]: Use the Alt+Q key combination or click on the magnifying glass icon in the top bar to launch the "Tell me what you want to do" search box. The search feature is a little bit smart and you can usually get away with just typing the start of the words you are looking for. I usually just type "Street Setup" to quickly get to the setup screen.
-[^3]: That's right, your first configuration task is going to see if you can correctly identify New Zealand in a list of countries.
-[^4]: Use the Alt+Q key combination or click on the magnifying glass icon in the top bar to launch the "Tell me what you want to do" search box. The search feature is a little bit smart and you can usually get away with just typing the start of the words you are looking for.
-[^5]: The biggest cost is the code-signing certificate. Then there's the domain name, the Microsoft 365 subscription, the template used to make the online help. Not to mention the time invested in building the app and keeping it up to date with the latest versions of Business Central. I feel a sales pitch coming on...  
+[^1]: In a Production environment a user can only see the **Bank Validation Result** field if they have a Bank Validator license assigned to them.
